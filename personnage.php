@@ -5,8 +5,8 @@
 //dégfinir les propriétés ici 
     public $life = 80;
     public $attack = 20;
-    // pas de val par défaut
     public $name;
+    // pas de val par défaut 
    
 //méthode
     public function shout() {
@@ -41,6 +41,26 @@
         //attaquant = $this
         $target->life -= $this->attack;
         // -20 vies pour lancelot = 64
+        $target -> non_negative();
+    }
+
+     // private $name; : accès privé
+
+    //     public function getName() {
+    //     return $this->name;
+    // }
+
+    // protected $name; : équivalent à private, protégé 
+
+    private function non_negative() {
+        if ($this->life < 0) {
+            $this->life = 0;
+        }
+    }
+    //cette fonction servira qu'à l'intérieur de la classe pour prévoir certains cas, donc déclarer en private
+
+    public function setName($name) {
+        $this->name = $name;
     }
 
  }
