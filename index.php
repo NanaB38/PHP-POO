@@ -7,7 +7,7 @@ $merlin = new Personnage("Merlin");
 // pour accéder à ce qui est à l'intérieur de l'objet : $merlin -> $life 
 // var_dump ($merlin -> shout()); 
 
-$merlin -> regenerate2();
+// $merlin -> regenerate2();
 //créer une nouvelle var name car pas de val par défaut
 // $merlin -> name = "Merlin";
 
@@ -21,19 +21,22 @@ $lancelot = new Personnage("Lancelot");
 //10 points de vie passés en param 
 
 // 84 vies 
-$merlin -> attack($lancelot);
-if ($lancelot->dead()) {
-    echo 'Lancelot est mort...';
-}
-else {
-    echo 'Lancelot a survécu avec ' . $lancelot->life . ' points de vie !';
-}
-
-$merlin -> setName('Merlin l Enchanteur');
+// $merlin -> attack($lancelot);
+// if ($lancelot->dead()) {
+//     echo 'Lancelot est mort...';
+// }
+// else {
+//     echo 'Lancelot a survécu avec ' . $lancelot->life . ' points de vie !';
+// }
 
 
-var_dump ($merlin); 
-var_dump ($lancelot); 
+var_dump ($merlin, $lancelot, $gauvain ); 
 
-var_dump ($lancelot-> regenerate2(4)); 
+// $merlin -> setName('Merlin l Enchanteur');
+// var_dump ($merlin -> getName());
+// var_dump ($merlin -> setName());
+// var_dump ($merlin -> getAttack());
+// var_dump ($merlin -> getLife());
+
+// var_dump ($lancelot-> regenerate2(4)); 
 

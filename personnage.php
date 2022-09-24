@@ -1,8 +1,8 @@
  <?php
  class Personnage {
 
-//variables 
-//dégfinir les propriétés ici 
+//variables - dégfinir les propriétés ici 
+//private : on ne peut les altérer de l'extérieur 
     public $life = 80;
     public $attack = 20;
     public $name;
@@ -37,6 +37,7 @@
         // ou $this->life += $life;
     }
     }
+
     public function attack($target) {
         //attaquant = $this
         $target->life -= $this->attack;
@@ -44,23 +45,30 @@
         $target -> non_negative();
     }
 
-     // private $name; : accès privé
-
-    //     public function getName() {
-    //     return $this->name;
-    // }
-
     // protected $name; : équivalent à private, protégé 
 
-    private function non_negative() {
+    public function non_negative() {
         if ($this->life < 0) {
             $this->life = 0;
         }
     }
-    //cette fonction servira qu'à l'intérieur de la classe pour prévoir certains cas, donc déclarer en private
+    
+    //private function : fonction servira qu'à l'intérieur de la classe pour prévoir certains cas, donc déclarer en private
 
-    public function setName($name) {
-        $this->name = $name;
+    public function getName() {
+        $this->$this = name;
     }
 
+     // private $name; : accès privé
+
+
+    // créer des getter pour récupérer ces infos private
+
+    public function getLife() {
+        $this->$this = life;
+    }
+
+    public function getAttack() {
+        $this->$this = attack;
+    }
  }
